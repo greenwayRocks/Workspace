@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Index Page{% endblock %}
+
+{% block content %}
+    <h1>Database Results</h1>
+    <hr>
+    {% for item in results %}
+        <h3>{{ item.id }} -> {{ item.name }} lives in {{ item.location }}</h3>
+    {% endfor %}
+    <hr>
+    <h3>Go To <a href="{{ url_for('form') }}">Form</a></h3>
+{% endblock %}

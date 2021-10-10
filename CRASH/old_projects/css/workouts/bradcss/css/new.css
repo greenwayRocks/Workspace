@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Gotu&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Gotu", sans-serif;
+}
+
+.container {
+  max-width: 75%;
+  margin: auto;
+}
+
+.box {
+  background: #f4f4f4;
+  border: 2px solid #2f4f4f;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  text-align: justify;
+}
+.box h3 {
+  text-align: center;
+}
+.box a {
+  text-decoration: none;
+  background-color: #4c6ca0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 150px;
+}
+.box a:hover {
+  background-color: #446190;
+  color: #f4f4f4;
+}
+
+#box-2 {
+  float: left;
+  width: 68%;
+  height: 220px;
+}
+
+#box-3 {
+  float: right;
+  width: 30%;
+}
+
+.clr {
+  clear: both;
+}
+
+/* Navbar Styling */
+.navbar {
+  list-style: none;
+  padding-left: 0;
+  background-color: #4c6ca0;
+  border-radius: 5px;
+  overflow: auto;
+}
+.navbar li {
+  float: left;
+}
+.navbar li a {
+  display: inline-block;
+  color: #f4f4f4;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+.navbar li a:hover {
+  background-color: #446190;
+  color: #fff;
+}

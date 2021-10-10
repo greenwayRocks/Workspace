@@ -1,0 +1,219 @@
+.carousel-container {
+  height: 20em;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.carousel {
+  height: 22em;
+  position: relative;
+  width: 100%;
+}
+
+.item {
+  cursor: pointer;
+  height: 20em;
+    left: 50%;
+  list-style: none;
+  margin: 8em auto 4em;
+  opacity: 0;
+  overflow: hidden;
+  padding: 1em;
+  position: absolute;
+    top: 0;
+  -webkit-transform: translate(calc(100% + 12em), -50%) scale(.6);
+          transform: translate(calc(100% + 12em), -50%) scale(.6);
+  -webkit-transition: opacity 1s cubic-bezier(.8,0,.2,1),
+              -webkit-transform 1.5s cubic-bezier(.2,0,.2,1);
+  transition: opacity 1s cubic-bezier(.8,0,.2,1),
+              -webkit-transform 1.5s cubic-bezier(.2,0,.2,1);
+  transition: transform 1.5s cubic-bezier(.2,0,.2,1),
+              opacity 1s cubic-bezier(.8,0,.2,1);
+  transition: transform 1.5s cubic-bezier(.2,0,.2,1),
+              opacity 1s cubic-bezier(.8,0,.2,1),
+              -webkit-transform 1.5s cubic-bezier(.2,0,.2,1);
+  width: 100vw;
+}
+
+.item-image {
+  background-size: 100%;
+    bottom: 0;
+    left: 0;
+  position: absolute;
+    right: 0;
+    top: 0;
+  -webkit-transition: all 5s cubic-bezier(.2,0,0,1);
+  transition: all 5s cubic-bezier(.2,0,0,1);
+  z-index: 0;
+}
+
+.item-image::after {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,.4) 50%, rgba(0,0,0,.8));
+  background: linear-gradient(to bottom, rgba(0,0,0,.4) 50%, rgba(0,0,0,.8));
+    bottom: 0;
+  content: "";
+    left: 0;
+  position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.item-text {
+  color: #fff;
+    left: 50%;
+  position: absolute;
+  text-align: center;
+    top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.item-text h2 {
+  font-size: 2em;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-transition: all 2s cubic-bezier(.2,0,0,1);
+  transition: all 2s cubic-bezier(.2,0,0,1);
+}
+
+.item-text p {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-transition: all 2.5s cubic-bezier(.2,0,0,1);
+  transition: all 2.5s cubic-bezier(.2,0,0,1);
+}
+
+.item.previous {
+  opacity: 1;
+  -webkit-transform: translate(-150%, -50%);
+          transform: translate(-150%, -50%);
+}
+
+.item.previous .item-image, .item.next .item-image {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+
+.item.previous .item-text h2, .item.next .item-text h2 {
+  opacity: 0;
+  -webkit-transform: translateY(-1em) scale(1.2);
+          transform: translateY(-1em) scale(1.2);
+}
+
+.item.previous .item-text p, .item.next .item-text p {
+  opacity: 0;
+  -webkit-transform: translateY(1em) scale(1.2);
+          transform: translateY(1em) scale(1.2);
+}
+
+.item.current {
+  cursor: default;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.item.next {
+  opacity: 1;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+/* styling pips */
+
+.carousel-pips {
+    bottom: 2em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 20;
+}
+
+.carousel-pips ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.pip {
+  background: #333;
+  border: 2px solid #000;
+  border-radius: .5em;
+  display: inline-block;
+  height: 10px;
+  margin: 0 .1em;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  -webkit-transition: all 1s .2s ease-out;
+  transition: all 1s .2s ease-out;
+  width: 50px;
+}
+
+.pip:before {
+  background: #fff;
+  border-radius: .5em;
+    bottom: 0;
+  content: "";
+    left: 0;
+  position: absolute;
+    right: 0;
+    top: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+}
+
+.pip.current:before {
+  -webkit-animation: pip-progress 5s linear forwards;
+          animation: pip-progress 5s linear forwards;
+}
+
+@-webkit-keyframes pip-progress {
+  80% {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes pip-progress {
+  80% {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.pip.previous, .pip.next {
+  background: #333;
+}
+
+.pip.current {
+  background: #aaa;
+  cursor: default;
+}
+
+.pip:not(.current):hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+

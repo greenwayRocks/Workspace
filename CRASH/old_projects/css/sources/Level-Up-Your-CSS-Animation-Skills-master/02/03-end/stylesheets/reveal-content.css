@@ -1,0 +1,72 @@
+/* Styles for highlighting the current hovered content area */
+
+/* Hide the parts we'll show when highlighted */
+
+.option .more-info {
+  visibility: hidden;
+}
+
+.option .call-to-action {
+  -webkit-transform: scale(.2);
+          transform: scale(.2);
+  visibility: hidden;
+}
+
+/* Set up the "highlighted" state */
+
+.option.highlighted {
+  background: #fff;
+  border-color: #eee;
+  -webkit-transform: scale(1.2) translateY(1em);
+          transform: scale(1.2) translateY(1em);
+}
+
+.option.highlighted .badge {
+  -webkit-transform: translateY(-5em) scale(1.2);
+          transform: translateY(-5em) scale(1.2);
+}
+
+.option.highlighted h2 {
+  -webkit-transform: translateY(-3.5em);
+          transform: translateY(-3.5em);
+}
+
+.option.highlighted .more-info {
+  -webkit-transform: translateY(-4em);
+          transform: translateY(-4em);
+  visibility: visible;
+}
+
+.option.highlighted .call-to-action {
+  -webkit-transform: translateY(1.25em);
+          transform: translateY(1.25em);
+  visibility: visible;
+}
+
+.option.highlighted .summary {
+  visibility: hidden;
+}
+
+/* Transitions */
+
+.option {
+  -webkit-transition: background .2s ease-out,
+              -webkit-transform 5s cubic-bezier(0,1.7,.3,1);
+  transition: background .2s ease-out,
+              -webkit-transform 5s cubic-bezier(0,1.7,.3,1);
+  transition: transform 5s cubic-bezier(0,1.7,.3,1),
+              background .2s ease-out;
+  transition: transform 5s cubic-bezier(0,1.7,.3,1),
+              background .2s ease-out,
+              -webkit-transform 5s cubic-bezier(0,1.7,.3,1);
+}
+
+.option > * {
+  -webkit-transition: -webkit-transform .5s cubic-bezier(0,1,.3,1);
+  transition: -webkit-transform .5s cubic-bezier(0,1,.3,1);
+  transition: transform .5s cubic-bezier(0,1,.3,1);
+  transition: transform .5s cubic-bezier(0,1,.3,1), -webkit-transform .5s cubic-bezier(0,1,.3,1);
+}
+
+
+

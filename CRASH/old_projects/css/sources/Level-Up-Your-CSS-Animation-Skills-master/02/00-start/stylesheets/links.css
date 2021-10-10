@@ -1,0 +1,32 @@
+/* Styles for the links */
+
+a {
+  color: #2f56b0;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.4s ease-out;
+}
+
+a::after {
+  border-top: 0.1em solid #2f56b0;
+  border-radius: 1em;
+  content: "";
+
+  position: absolute;
+  bottom: 0.14em;
+  left: 50%;
+  right: 50%;
+
+  transition: all 0.4s cubic-bezier(0, 0.5, 0, 1), border-color 0.4s ease-out;
+}
+
+a:hover {
+  color: #457dfb;
+  text-decoration: none;
+}
+
+a:hover::after {
+  border-color: #457dfb;
+  right: 0;
+  left: 0;
+}

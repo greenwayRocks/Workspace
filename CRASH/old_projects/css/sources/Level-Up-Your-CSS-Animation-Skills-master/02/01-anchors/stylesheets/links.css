@@ -1,0 +1,63 @@
+/* Styles for the links */
+
+a {
+  color: #2F56B0;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color .4s ease-out;
+  transition: color .4s ease-out;
+}
+
+a::after {
+  border-radius: 1em;
+  border-top: .1em solid #2F56B0;
+    bottom: .14em;
+  content: "";
+    left: 0;
+  position: absolute;
+    right: 100%;
+  -webkit-transition: border-color .4s ease-out;
+  transition: border-color .4s ease-out;
+}
+
+a:hover {
+  color: #457DFB;
+  right: 0;
+  text-decoration: none;
+}
+
+a:hover::after {
+  -webkit-animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
+          animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
+  border-color: #457DFB;
+}
+
+@-webkit-keyframes anchor-underline {
+  0%, 10% {
+    left: 0;
+    right: 100%;
+  }
+  40%, 60% {
+    left: 0;
+    right: 0;
+  }
+  90%, 100% {
+    left: 100%;
+    right: 0;
+  }
+}
+
+@keyframes anchor-underline {
+  0%, 10% {
+    left: 0;
+    right: 100%;
+  }
+  40%, 60% {
+    left: 0;
+    right: 0;
+  }
+  90%, 100% {
+    left: 100%;
+    right: 0;
+  }
+}

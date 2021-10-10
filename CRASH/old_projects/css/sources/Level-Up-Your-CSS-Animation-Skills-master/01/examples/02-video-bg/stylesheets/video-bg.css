@@ -1,0 +1,58 @@
+.no-video .video-container video, .touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster, .touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    -webkit-animation: no-transform 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+            animation: no-transform 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+    background: #000;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
+    width: 100vw;
+}
+.video-container .poster img {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.video-container .filter {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+.video-container video {
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+}
+.video-container video.fillWidth {
+    height: 100%;
+}
+
+/*
+header:before {
+  animation: no-transform 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  content: "";
+  opacity: 0;
+  transform: translateY(-4rem);
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  z-index: -1;
+}
+*/

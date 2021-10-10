@@ -1,0 +1,77 @@
+/* Styles for the buttons */
+
+.button {
+  background: none;
+  position: relative;
+  text-decoration: none;
+}
+
+.button::before {
+  background: rgba(200,200,200,.8);
+    bottom: -.1em;
+  content: "";
+    left: 0;
+  position: absolute;
+    right: 0;
+    top: .5em;
+  z-index: -1;
+}
+
+.button::after {
+  background: -webkit-linear-gradient(top, #48CA24, #FD0A69 90%);
+  background: linear-gradient(to bottom, #48CA24, #FD0A69 90%);
+  background-size: 100% 500%;
+    bottom: 0;
+  content: "";
+    left: 0;
+  position: absolute;
+    right: 0;
+    top: 0;
+  -webkit-transition: all 10s cubic-bezier(0,.5,.5,1);
+  transition: all 10s cubic-bezier(0,.5,.5,1);
+  z-index: -1;
+}
+
+.button:hover {
+  -webkit-animation: pulse 1s ease-out infinite;
+          animation: pulse 1s ease-out infinite;
+  text-decoration: none;
+}
+
+.button:hover::after {
+  background-position: 0 100%;
+}
+
+.button:active {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: translateY(.2em);
+          transform: translateY(.2em);
+}
+
+.button:active::before {
+  -webkit-transform: translateY(-.1em);
+          transform: translateY(-.1em);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}

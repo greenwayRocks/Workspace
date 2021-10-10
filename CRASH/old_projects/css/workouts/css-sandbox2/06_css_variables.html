@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --light-color: #f4f4f4;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+        background: var(--light-color);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Variables</h1>
+    </header>
+
+    <div class="container">
+      <div class="box box-1">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+          consequuntur, dolorum minima magni incidunt voluptate!
+        </p>
+      </div>
+      <div class="box box-2">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+          consequuntur, dolorum minima magni incidunt voluptate!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

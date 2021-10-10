@@ -1,0 +1,135 @@
+.carousel-container {
+  height: 18em;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 80vw;
+}
+
+.carousel {
+  height: 18em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.item {
+  cursor: pointer;
+  height: 18em;
+    left: 50%;
+  list-style: none;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+    top: 0;
+  -webkit-transform: translate(calc(100% + 12em), -50%) scale(.6);
+          transform: translate(calc(100% + 12em), -50%) scale(.6);
+  -webkit-transition: opacity 1s cubic-bezier(.8,0,.2,1),
+              -webkit-transform 1.5s cubic-bezier(.2,0,.2,1);
+  transition: opacity 1s cubic-bezier(.8,0,.2,1),
+              -webkit-transform 1.5s cubic-bezier(.2,0,.2,1);
+  transition: transform 1.5s cubic-bezier(.2,0,.2,1),
+              opacity 1s cubic-bezier(.8,0,.2,1);
+  transition: transform 1.5s cubic-bezier(.2,0,.2,1),
+              opacity 1s cubic-bezier(.8,0,.2,1),
+              -webkit-transform 1.5s cubic-bezier(.2,0,.2,1);
+  width: 80vw;
+}
+
+.item-image {
+  background-size: cover;
+    bottom: 0;
+    left: 0;
+  position: absolute;
+    right: 0;
+    top: 0;
+  -webkit-transition: all 5s cubic-bezier(.2,0,0,1);
+  transition: all 5s cubic-bezier(.2,0,0,1);
+  z-index: 0;
+}
+
+.item-image::after {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,.4) 50%, rgba(0,0,0,.8));
+  background: linear-gradient(to bottom, rgba(0,0,0,.4) 50%, rgba(0,0,0,.8));
+    bottom: 0;
+  content: "";
+    left: 0;
+  position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.item-text {
+  color: #fff;
+    left: 50%;
+  position: absolute;
+  text-align: center;
+    top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+
+.item-text h2 {
+  font-size: 2em;
+}
+
+.item.previous {
+  opacity: 1;
+  -webkit-transform: translate(-150%, 0);
+          transform: translate(-150%, 0);
+}
+
+.item.current {
+  cursor: default;
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 10;
+}
+
+.item.next {
+  opacity: 1;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  z-index: 0;
+}
+
+.control {
+  cursor: pointer;
+  font-size: 2em;
+  height: 1em;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 0 3px #fff;
+    top: calc(50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 20;
+}
+
+.control.previous {
+  height: 1em;
+  left: .25em;
+  width: 1em;
+}
+
+.control.previous:after {
+  content: "<";
+}
+
+.control.next {
+  height: 1em;
+  right: .25em;
+  width: 1em;
+}
+
+.control.next:after {
+  content: ">";
+}
+

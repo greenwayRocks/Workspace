@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Animated carousel: Level up your CSS animation skills</title>
+    <!-- The default layout, resets and and text styling -->
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <!-- Custom styling -->
+    <link href="stylesheets/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class="carousel-container">
+      <ul class="carousel" id="carousel">
+        <a href="#">
+          <li class="item current">
+            <div class="item-image" style="background-image: url(./images/forest1.jpg);"></div>
+            <div class="item-text">
+              <h2>Forest One</h2>
+              <p>Some descriptive text</p>
+            </div>
+          </li>
+        </a>
+        <a href="#">
+          <li class="item next">
+            <div class="item-image" style="background-image: url(./images/forest2.jpg);"></div>
+            <div class="item-text">
+              <h2>Forest Two</h2>
+              <p>Some descriptive text</p>
+            </div>
+          </li>
+        </a>
+        <a href="#">
+          <li class="item previous">
+            <div class="item-image" style="background-image: url(./images/forest3.jpg);"></div>
+            <div class="item-text">
+              <h2>Forest Three</h2>
+              <p>Some descriptive text</p>
+            </div>
+          </li>
+        </a>
+      </ul>
+      <div class="control previous" id="control-previous"></div>
+      <div class="control next" id="control-next"></div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="javascripts/carousel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+default:
+  email: 'thisisnotmeofcourse@gmail.com'
+  server: 'smtp.gmail.com'
+  port: 465
+  password: 'mypasswd'

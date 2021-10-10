@@ -1,0 +1,51 @@
+#!/usr/bin/python3
+import argparse
+import yaml
+import smtplib
+from email.message import EmailMessage
+
+
+def main(to_email, server, port, from_email, password, text):
+    print(f'With love, from {from_email} to {to_email}')
+
+    # Create message
+    subject = 'Linux server is here for you! Let me tell you about those daemons.'
+    if not text:
+        text = '''Your utility daemon is live and sending this message! Say hi.'''
+
+    msg = EmailMessage()
+    msg.set_content(text)
+    msg['Subject'] = subject
+    msg['From'] = from_email
+    msg['To'] = to_email
+
+    # Open communication and send
+    server = smtplib.SMTP_SSL(server, port)
+    server.login(from_email, password)
+    server.send_message(msg)
+    server.quit()
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Email handler v1.0')
+
+    parser.add_argument('email', type=str, help='destination email')
+    parser.add_argument('-c', dest='config', type=argparse.FileType('r'),
+                        help='config file in yaml', default='/home/kali/bin/config.yml')
+    parser.add_argument('--msg', type=str, help='text message to send')
+
+    args = parser.parse_args()
+
+    if not args.config:
+        print('Error, a config file is required!')
+        parser.print_help()
+        exit(1)
+
+    config = yaml.load(args.config, Loader=yaml.FullLoader)
+
+    main(args.email,
+         server=config['default']['server'],
+         port=config['default']['port'],
+         from_email=config['default']['email'],
+         password=config['default']['password'],
+         text=args.msg)

@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Animated carousel: Level up your CSS animation skills</title>
+    <!-- The default layout, resets and and text styling -->
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <!-- Custom styling -->
+    <link href="stylesheets/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class="carousel-container">
+      <ul class="carousel" id="carousel">
+        <li class="item current">
+          <div class="item-image" style="background-image: url(./images/pink.jpg);"></div>
+          <div class="item-text">
+            <h2>Pink Apples</h2>
+            <p>Hanging on a branch</p>
+          </div>
+        </li>
+        <li class="item next">
+          <div class="item-image" style="background-image: url(./images/green.jpg);"></div>
+          <div class="item-text">
+            <h2>Green Apples</h2>
+            <p>Sitting in a basket</p>
+          </div>
+        </li>
+        <li class="item previous">
+          <div class="item-image" style="background-image: url(./images/red.jpg);"></div>
+          <div class="item-text">
+            <h2>Red Apples</h2>
+            <p>On a cloth</p>
+          </div>
+        </li>
+      </ul>
+      <section class="carousel-pips" id="carousel-pips">
+        <ul></ul>
+      </section>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="javascripts/carousel.js"></script>
+  </body>
+</html>

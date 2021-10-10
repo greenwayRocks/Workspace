@@ -1,0 +1,95 @@
+/* Styles for the buttons */
+
+body {
+  background: #444;
+}
+
+.button {
+  background: none;
+  border-radius: .2em;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0 0 1px #333;
+  z-index: 0;
+}
+
+.button::before {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  background: -webkit-linear-gradient(top, #48CA24, #FD0A69 90%);
+  background: linear-gradient(to bottom, #48CA24, #FD0A69 90%);
+  border-radius: .15em;
+    bottom: -50%;
+  content: "";
+    left: -100%;
+  position: absolute;
+    right: -100%;
+    top: -500%;
+  z-index: -1;
+}
+
+.button::after {
+  background: #333;
+  border-radius: .1em;
+    bottom: .1em;
+  content: "";
+    left: .1em;
+  position: absolute;
+    right: .1em;
+    top: .1em;
+  z-index: -1;
+}
+
+.button:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.button:hover::before {
+
+}
+
+.button:hover::after {
+  opacity: .5;
+}
+
+.button:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: none;
+  transition: none;
+}
+
+.button:active::before {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.button, .button::before, .button::after {
+  -webkit-transition: opacity .3s ease-out,
+              -webkit-transform .5s cubic-bezier(0,1,.3,1);
+  transition: opacity .3s ease-out,
+              -webkit-transform .5s cubic-bezier(0,1,.3,1);
+  transition: opacity .3s ease-out,
+              transform .5s cubic-bezier(0,1,.3,1);
+  transition: opacity .3s ease-out,
+              transform .5s cubic-bezier(0,1,.3,1),
+              -webkit-transform .5s cubic-bezier(0,1,.3,1);;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}

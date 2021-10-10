@@ -1,0 +1,60 @@
+/* Styles for the tooltips */
+
+.title-tooltip {
+  background: rgba(255,255,255,.9);
+  border: 2px solid #457DFB;
+  border-radius: .1em;
+    bottom: 2em;
+  font-size: .7em;
+    left: calc(50% - 8em);
+  opacity: 0;
+  padding: .25em .5em;
+  position: absolute;
+  text-align: center;
+  -webkit-transform: translateY(-.25em);
+          transform: translateY(-.25em);
+  -webkit-transition: visibility 0s .5s,
+              opacity .2s ease-out,
+              -webkit-transform .5s cubic-bezier(0,1,.5,1);
+  transition: visibility 0s .5s,
+              opacity .2s ease-out,
+              -webkit-transform .5s cubic-bezier(0,1,.5,1);
+  transition: visibility 0s .5s,
+              opacity .2s ease-out,
+              transform .5s cubic-bezier(0,1,.5,1);
+  transition: visibility 0s .5s,
+              opacity .2s ease-out,
+              transform .5s cubic-bezier(0,1,.5,1),
+              -webkit-transform .5s cubic-bezier(0,1,.5,1);
+  visibility: hidden;
+  width: 16em;
+  z-index: 10;
+}
+
+.title-tooltip::after {
+  border-color: #457DFB transparent;
+  border-radius: 0;
+  border-style: solid;
+  border-width: .2em .2em 0 .2em;
+    bottom: -.2em;
+  content: "";
+    left: calc(50% - .2em);
+  position: absolute;
+  width: 0;
+}
+
+.anchor-tooltip:hover .title-tooltip {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: opacity .2s ease-out,
+              -webkit-transform .5s cubic-bezier(0,1,.5,1);
+  transition: opacity .2s ease-out,
+              -webkit-transform .5s cubic-bezier(0,1,.5,1);
+  transition: opacity .2s ease-out,
+              transform .5s cubic-bezier(0,1,.5,1);
+  transition: opacity .2s ease-out,
+              transform .5s cubic-bezier(0,1,.5,1),
+              -webkit-transform .5s cubic-bezier(0,1,.5,1);
+  visibility: visible;
+}

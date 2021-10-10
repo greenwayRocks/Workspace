@@ -1,0 +1,35 @@
+/* Styles for the links */
+
+a {
+  color: #2F56B0;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color .4s ease-out;
+  transition: color .4s ease-out;
+}
+
+a::after {
+  border-radius: 1em;
+  border-top: .1em solid #2F56B0;
+    bottom: .14em;
+  content: "";
+    left: 0;
+  position: absolute;
+    right: 100%;
+  -webkit-transition: border-color .4s ease-out,
+              right .4s cubic-bezier(0,.5,0,1);
+  transition: border-color .4s ease-out,
+              right .4s cubic-bezier(0,.5,0,1);
+}
+
+a:hover {
+  color: #457DFB;
+  text-decoration: none;
+}
+
+a:hover::after {
+  border-color: #457DFB;
+  right: 0;
+}
+

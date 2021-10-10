@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #00f;
+}
+
+body {
+  font-size: 0.8rem;
+  height: 100vh;
+  background: #4c6ca0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+ul > li {
+  padding-right: 0.7rem;
+}
+
+.people li {
+  padding-right: 0.2rem;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  background: #333;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+span {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Other Styles */
+.tweet {
+  background: #f4f4f4;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  width: 35%;
+}
+
+.content {
+  background: #f4f4f4;
+  padding-left: 75px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.content > img {
+  position: absolute;
+  margin-left: -65px;
+  margin-top: 6px;
+}
+
+.content > time {
+  position: absolute;
+  margin-top: -1.5rem;
+  margin-left: 26.5rem;
+  color: #999;
+}
+
+.actions,
+.meta,
+.people {
+  display: flex;
+  padding: 0.25rem;
+}
+
+.people img {
+  height: 25px;
+  width: 25px;
+}
+
+.meta {
+  margin-bottom: 0.5rem;
+}
+
+.meta > * {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 0.25rem;
+}
+
+.meta .retweets {
+  border-left: none;
+}
+
+.meta .people {
+  flex: 5;
+  border-right: none;
+}
+
+.meta .retweets,
+.meta .favorites {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Reply */
+.reply {
+  background: #ddd;
+  padding-left: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 5px;
+}
+
+.reply > div {
+  border: 2px solid #ccc;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.reply > div > span {
+  color: var(--primary-color);
+}

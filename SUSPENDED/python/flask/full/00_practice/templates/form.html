@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Form Page{% endblock %}
+
+{% block content %}
+    <h1>My Form</h1><hr>
+    <form method="POST" action="/form">
+        <input type="text" name="name" placeholder="Name"> <br><br>
+        <input type="text" name="location" placeholder="Location"> <br><br> 
+        <input type="submit" value="Submit" >
+    </form><hr>
+    <h3>Go To <a href="{{ url_for('index') }}">Home</a></h3>
+{% endblock %}

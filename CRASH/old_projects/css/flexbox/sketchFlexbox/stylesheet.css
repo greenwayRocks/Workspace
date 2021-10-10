@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column;
+}
+
+header {
+  background: rgba(200, 200, 200, 1);
+}
+
+article {
+  background: rgba(200, 200, 200, 0.8);
+}
+
+aside {
+  background: rgba(200, 200, 200, 0.6);
+}
+
+footer {
+  background: rgba(200, 200, 200, 0.4);
+}
+
+header,
+footer {
+  min-height: 100px;
+}
+
+.middle {
+  display: flex;
+  min-height: 500px;
+}
+
+aside {
+  flex: 1 0 0;
+}
+
+article {
+  flex: 3 0 0;
+}

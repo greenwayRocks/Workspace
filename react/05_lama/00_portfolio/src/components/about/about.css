@@ -1,0 +1,42 @@
+/* CSS properties for the About Page of my Portfolio */
+
+.about {
+  height: 100vh;
+  background-color: azure;
+  display: flex;
+}
+
+.about .a-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about .a-right {
+  flex: 1;
+  background-color: #59b256;
+  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.a-card {
+  height: 70vh;
+  width: 60%;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.a-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.a-bg {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: #333;
+}

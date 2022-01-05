@@ -1,11 +1,11 @@
 ---
-# Awesome WiKi [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
+## Awesome WiKi [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 
-In a beautiful KDE environment, I'm getting started with **_React_**.
-I'm gonna write `WIKIs` too!
+In a beautiful KDE environment, I'm getting started with **_a lot!**.
+I'm gonna write `Wikis` too!
 ---
 
-## REACT `only for now`
+### REACT `??`
 
 Why bother React when there's vanilla javascript., its templates and innerHTML?
 The answer is,
@@ -20,7 +20,11 @@ What am I learning?
 
     * _Button Project_
     * _The Github Cards App_
-    * _The Start Match Game_
+    * Voting App
+    * Timers App
+    * Redux Chat Project .. complete %%
+    * Trello Client .. ??
+    * GOAL: ** Tinyhouse Project **
 
 ###- **_Mastering Linux Security and Hardening_**
 
@@ -29,20 +33,22 @@ What am I learning?
     * File System Security
     * Network Security
 
-###- **_FullStack React Book_**
-
-    * Voting App
-
-###- **_Vim and VimWIKI_**
+###- **_Vim and Wikis_**
 
     * Practical Vim, 2nd edition
     * Modern Vim
 
-~~ Update since 10 October, 2021::
+###- **_Shell Scripting_**
+
+    * Python's Click
+    * CyberOps with Bash
+
+```bash
 -< Merged old projects in my workspace, so I have all that I need within my reach.
--< I should automate Workspace backup on hard disk; pushes to github;
+-< I should automate Workspace backup on hard disk && to github;
 
--< I've implemented a structure: CRASH, SUSPENDED - to label some projects to let go of them.
--< MILESTONES - to see what I can really do!
+-< I've implemented a structure of repos :: .crash, .suspend, .milestones
+-< Milestones can be "special" for sure.
 
--< react, css_JS, shell --> All that I need? Python maybe but for later!
+-< 
+```
